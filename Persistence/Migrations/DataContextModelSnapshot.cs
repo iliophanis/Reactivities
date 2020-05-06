@@ -123,7 +123,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("DateJoined")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("isHost")
+                    b.Property<bool>("IsHost")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("AppUserId", "ActivityId");

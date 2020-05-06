@@ -9,8 +9,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200306092245_UserActivityAdded")]
-    partial class UserActivityAdded
+    [Migration("20200506133103_UserActivitiesAdded")]
+    partial class UserActivitiesAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -125,7 +125,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("DateJoined")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("isHost")
+                    b.Property<bool>("IsHost")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("AppUserId", "ActivityId");

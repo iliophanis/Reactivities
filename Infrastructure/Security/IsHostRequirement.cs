@@ -37,13 +37,12 @@ namespace Infrastructure.Security
                 var host = activity.UserActivities.FirstOrDefault(x => x.IsHost);
 
                 if (host?.AppUser?.UserName == currentUserName)
-                    context.Succeed(requirement); //work as middleware if authorize ok and continue else dont do anything
+                    context.Succeed(requirement);
             }
             else
             {
                 context.Fail();
             }
-
 
             return Task.CompletedTask;
         }
